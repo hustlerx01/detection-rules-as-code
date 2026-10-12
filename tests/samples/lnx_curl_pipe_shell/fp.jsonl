@@ -1,0 +1,2 @@
+{"CommandLine": "curl -o out.tar.gz https://example.org/a.tgz"}
+{"CommandLine": "wget https://example.org/sh-tutorial.pdf"}
