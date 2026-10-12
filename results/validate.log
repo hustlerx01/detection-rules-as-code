@@ -1,0 +1,12 @@
+ok   rules/linux/lnx_curl_pipe_shell.yml
+ok   rules/linux/lnx_reverse_shell_cmdline.yml
+ok   rules/windows/proc_certutil_download.yml
+ok   rules/windows/proc_encoded_powershell.yml
+ok   rules/windows/proc_lsass_dump_comsvcs.yml
+ok   rules/windows/proc_office_spawns_shell.yml
+ok   rules/windows/proc_shadow_copy_delete.yml
+ok   rules/windows/sec_machine_account_created_by_user.yml
+ok   rules/windows/sec_security_log_cleared.yml
+ok   rules/windows/sec_service_install_suspicious_path.yml
+pySigma -> Splunk: 10 converted, 0 failed
+10 rules, 0 with errors

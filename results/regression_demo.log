@@ -1,0 +1,2 @@
+proc_encoded_powershell                       high     2/2      1/2      FAIL  attack.t1059.001
+10 rules, 1 failing

@@ -1,0 +1,4 @@
+
+| rex field=CommandLine "(?<CommandLineMatch>python[23]?.*socket.*(dup2|pty))"
+| eval CommandLineCondition=if(isnotnull(CommandLineMatch), "true", "false")
+| search CommandLine IN ("*/dev/tcp/*", "*/dev/udp/*") OR (Image IN ("*/nc", "*/ncat", "*/netcat") CommandLine IN ("* -e *", "* -c *")) OR CommandLineCondition="true"

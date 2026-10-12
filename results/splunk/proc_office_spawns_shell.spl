@@ -1,0 +1,1 @@
+ParentImage IN ("*\\winword.exe", "*\\excel.exe", "*\\powerpnt.exe", "*\\outlook.exe") Image IN ("*\\cmd.exe", "*\\powershell.exe", "*\\wscript.exe", "*\\mshta.exe", "*\\rundll32.exe")

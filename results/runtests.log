@@ -1,0 +1,12 @@
+rule                                          level    TP hit   FP hit   result
+lnx_curl_pipe_shell                           medium   2/2      0/2      PASS  attack.t1059.004,attack.t1105
+lnx_reverse_shell_cmdline                     critical 3/3      0/2      PASS  attack.t1059.004
+proc_certutil_download                        high     1/1      0/1      PASS  attack.t1105
+proc_encoded_powershell                       high     2/2      0/2      PASS  attack.t1059.001
+proc_lsass_dump_comsvcs                       critical 1/1      0/1      PASS  attack.t1003.001
+proc_office_spawns_shell                      high     1/1      0/2      PASS  attack.t1204.002,attack.t1566.001
+proc_shadow_copy_delete                       critical 2/2      0/1      PASS  attack.t1490
+sec_machine_account_created_by_user           medium   1/1      0/1      PASS  attack.t1136.002
+sec_security_log_cleared                      high     1/1      0/2      PASS  attack.t1070.001
+sec_service_install_suspicious_path           high     2/2      0/2      PASS  attack.t1543.003,attack.t1569.002
+10 rules, 0 failing

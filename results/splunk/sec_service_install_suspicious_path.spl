@@ -1,0 +1,1 @@
+EventID IN (7045, 4697) ImagePath IN ("*\\Users\\Public\\*", "*\\AppData\\*", "*\\Temp\\*", "*%COMSPEC%*", "*powershell*")

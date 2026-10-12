@@ -1,0 +1,2 @@
+*
+| regex CommandLine="(curl|wget)[^|]*\\|\\s*(ba|z|da)?sh\\b"
