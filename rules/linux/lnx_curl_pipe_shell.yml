@@ -1,0 +1,22 @@
+title: Download piped directly into a shell
+id: e595b8e1-592c-531f-a2e4-dac659d40c3c
+status: experimental
+description: Download piped directly into a shell. Part of Ansar Shaikh's detection-as-code
+  lab.
+author: Ansar Shaikh
+date: 2026/10/11
+tags:
+- attack.execution
+- attack.t1059.004
+- attack.command_and_control
+- attack.t1105
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine|re: (curl|wget)[^|]*\|\s*(ba|z|da)?sh\b
+  condition: selection
+falsepositives:
+- Vendor install scripts (rustup, docker get.sh)
+level: medium

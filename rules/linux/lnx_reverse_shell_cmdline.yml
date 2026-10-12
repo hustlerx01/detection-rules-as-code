@@ -1,0 +1,31 @@
+title: Reverse shell one-liner
+id: b0fd92f2-44ab-57e7-8b1e-0f7980057901
+status: experimental
+description: Reverse shell one-liner. Part of Ansar Shaikh's detection-as-code lab.
+author: Ansar Shaikh
+date: 2026/10/11
+tags:
+- attack.execution
+- attack.t1059.004
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  bash:
+    CommandLine|contains:
+    - /dev/tcp/
+    - /dev/udp/
+  nc:
+    Image|endswith:
+    - /nc
+    - /ncat
+    - /netcat
+    CommandLine|contains:
+    - ' -e '
+    - ' -c '
+  py:
+    CommandLine|re: python[23]?.*socket.*(dup2|pty)
+  condition: bash or nc or py
+falsepositives:
+- Pentest exercises
+level: critical

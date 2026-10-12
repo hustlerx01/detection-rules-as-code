@@ -1,0 +1,31 @@
+title: Service installed from user-writable path
+id: 4225804e-52ed-543c-b6c8-08884dda7318
+status: experimental
+description: Service installed from user-writable path. Part of Ansar Shaikh's detection-as-code
+  lab.
+author: Ansar Shaikh
+date: 2026/10/11
+tags:
+- attack.persistence
+- attack.t1543.003
+- attack.lateral_movement
+- attack.t1569.002
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID:
+    - 7045
+    - 4697
+  path:
+    ImagePath|contains:
+    - \Users\Public\
+    - \AppData\
+    - \Temp\
+    - '%COMSPEC%'
+    - powershell
+  condition: selection and path
+falsepositives:
+- Some updaters install from Temp
+level: high

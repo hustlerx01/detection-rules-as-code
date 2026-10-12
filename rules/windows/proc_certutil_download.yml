@@ -1,0 +1,27 @@
+title: Certutil used to download a file
+id: 22980af5-73b1-5a9d-9b6c-708f10c9e54d
+status: experimental
+description: Certutil used to download a file. Part of Ansar Shaikh's detection-as-code
+  lab.
+author: Ansar Shaikh
+date: 2026/10/11
+tags:
+- attack.command_and_control
+- attack.t1105
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith: \certutil.exe
+    CommandLine|contains:
+    - urlcache
+    - verifyctl
+  selection_url:
+    CommandLine|contains:
+    - http://
+    - https://
+  condition: selection and selection_url
+falsepositives:
+- Admin scripts fetching CRLs (rare)
+level: high

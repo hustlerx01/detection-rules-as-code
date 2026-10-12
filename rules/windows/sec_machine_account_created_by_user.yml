@@ -1,0 +1,21 @@
+title: Computer account created (name ends with $) via 4720
+id: d04a689a-24cb-5fdf-98ae-e0344899ea75
+status: experimental
+description: Computer account created (name ends with $) via 4720. Part of Ansar Shaikh's
+  detection-as-code lab.
+author: Ansar Shaikh
+date: 2026/10/11
+tags:
+- attack.persistence
+- attack.t1136.002
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4720
+    TargetUserName|endswith: $
+  condition: selection
+falsepositives:
+- Domain join by helpdesk accounts
+level: medium

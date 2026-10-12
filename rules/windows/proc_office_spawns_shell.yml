@@ -1,0 +1,33 @@
+title: Office application spawning a shell
+id: cc3a080c-2d12-5b30-bd2e-546ec67606da
+status: experimental
+description: Office application spawning a shell. Part of Ansar Shaikh's detection-as-code
+  lab.
+author: Ansar Shaikh
+date: 2026/10/11
+tags:
+- attack.execution
+- attack.t1204.002
+- attack.initial_access
+- attack.t1566.001
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  parent:
+    ParentImage|endswith:
+    - \winword.exe
+    - \excel.exe
+    - \powerpnt.exe
+    - \outlook.exe
+  child:
+    Image|endswith:
+    - \cmd.exe
+    - \powershell.exe
+    - \wscript.exe
+    - \mshta.exe
+    - \rundll32.exe
+  condition: parent and child
+falsepositives:
+- Legit Office add-ins invoking scripts
+level: high

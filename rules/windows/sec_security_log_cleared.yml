@@ -1,0 +1,20 @@
+title: Security event log cleared
+id: e31690e0-8a8d-53f2-90b4-40344d68c059
+status: experimental
+description: Security event log cleared. Part of Ansar Shaikh's detection-as-code
+  lab.
+author: Ansar Shaikh
+date: 2026/10/11
+tags:
+- attack.defense_evasion
+- attack.t1070.001
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 1102
+  condition: selection
+falsepositives:
+- Planned log maintenance
+level: high
