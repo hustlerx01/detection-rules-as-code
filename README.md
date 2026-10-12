@@ -1,5 +1,7 @@
 # detection-rules-as-code: Sigma rules with CI validation and replay tests
 
+[![CI](https://github.com/hustlerx01/detection-rules-as-code/actions/workflows/ci.yml/badge.svg)](https://github.com/hustlerx01/detection-rules-as-code/actions/workflows/ci.yml)
+
 > **Lab project.** 10 Sigma rules, each with true-positive and false-positive sample events, a linter, a small Sigma evaluator, pySigma conversion to Splunk SPL, and a GitHub Actions gate. The sample events are hand-written from public attack write-ups and documentation, not taken from production.
 
 ## Problem
